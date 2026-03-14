@@ -29,51 +29,53 @@
 
 @layer base {
   :root {
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Dark rainbow-themed base palette */
-    --background: 0.08 0.01 270;
-    --foreground: 0.96 0.01 100;
+    /* Warm Himalayan marketplace palette */
+    --background: 0.97 0.015 80;
+    --foreground: 0.22 0.04 50;
 
-    --card: 0.12 0.015 270;
-    --card-foreground: 0.96 0.01 100;
+    --card: 0.99 0.008 85;
+    --card-foreground: 0.22 0.04 50;
 
-    --popover: 0.12 0.015 270;
-    --popover-foreground: 0.96 0.01 100;
+    --popover: 0.99 0.008 85;
+    --popover-foreground: 0.22 0.04 50;
 
-    --primary: 0.68 0.22 30;
-    --primary-foreground: 0.99 0.005 72;
+    /* Saffron primary */
+    --primary: 0.7 0.16 52;
+    --primary-foreground: 0.99 0.005 85;
 
-    --secondary: 0.18 0.02 270;
-    --secondary-foreground: 0.96 0.01 100;
+    --secondary: 0.93 0.03 80;
+    --secondary-foreground: 0.3 0.05 50;
 
-    --muted: 0.16 0.015 270;
-    --muted-foreground: 0.55 0.02 240;
+    --muted: 0.94 0.02 80;
+    --muted-foreground: 0.5 0.03 60;
 
-    --accent: 0.55 0.18 290;
-    --accent-foreground: 0.99 0.005 72;
+    /* Gold accent */
+    --accent: 0.82 0.14 80;
+    --accent-foreground: 0.22 0.04 50;
 
-    --destructive: 0.577 0.245 27.325;
-    --destructive-foreground: 0.985 0 0;
+    --destructive: 0.45 0.18 25;
+    --destructive-foreground: 0.99 0.005 85;
 
-    --border: 0.22 0.01 270;
-    --input: 0.2 0.01 270;
-    --ring: 0.68 0.22 30;
+    --border: 0.88 0.04 75;
+    --input: 0.92 0.025 80;
+    --ring: 0.7 0.16 52;
 
-    --chart-1: 0.55 0.22 25;
-    --chart-2: 0.68 0.18 55;
-    --chart-3: 0.72 0.18 90;
-    --chart-4: 0.55 0.16 160;
-    --chart-5: 0.5 0.18 240;
+    --chart-1: 0.7 0.16 52;
+    --chart-2: 0.82 0.14 80;
+    --chart-3: 0.45 0.1 30;
+    --chart-4: 0.55 0.12 150;
+    --chart-5: 0.6 0.12 200;
 
-    --sidebar: 0.1 0.01 270;
-    --sidebar-foreground: 0.96 0.01 100;
-    --sidebar-primary: 0.68 0.22 30;
-    --sidebar-primary-foreground: 0.99 0.005 72;
-    --sidebar-accent: 0.18 0.02 270;
-    --sidebar-accent-foreground: 0.96 0.01 100;
-    --sidebar-border: 0.22 0.01 270;
-    --sidebar-ring: 0.68 0.22 30;
+    --sidebar: 0.96 0.02 80;
+    --sidebar-foreground: 0.22 0.04 50;
+    --sidebar-primary: 0.7 0.16 52;
+    --sidebar-primary-foreground: 0.99 0.005 85;
+    --sidebar-accent: 0.93 0.03 80;
+    --sidebar-accent-foreground: 0.3 0.05 50;
+    --sidebar-border: 0.88 0.04 75;
+    --sidebar-ring: 0.7 0.16 52;
   }
 
   * {
@@ -108,28 +110,6 @@
   }
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes scrollBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(8px);
-    opacity: 0.5;
-  }
-}
-
 @keyframes accordion-down {
   from {
     height: 0;
@@ -146,4 +126,34 @@
   to {
     height: 0;
   }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart-slide-in {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
 }

@@ -64,15 +64,43 @@ export default {
           border: 'oklch(var(--sidebar-border))',
           ring: 'oklch(var(--sidebar-ring))'
         },
-        rainbow: {
-          red: '#E63946',
-          orange: '#F4A261',
-          yellow: '#E9C46A',
-          green: '#2A9D8F',
-          blue: '#457B9D',
-          indigo: '#3D405B',
-          violet: '#9B5DE5',
-        }
+        saffron: {
+          50: '#FFF8F0',
+          100: '#FDECD5',
+          200: '#FAD5A0',
+          300: '#F7BC6B',
+          400: '#F4A261',
+          500: '#E8843A',
+          600: '#C96520',
+          700: '#A04D18',
+          800: '#7A3812',
+          900: '#5A280D',
+        },
+        maroon: {
+          50: '#FDF0F0',
+          100: '#F9D5D5',
+          200: '#F0A0A0',
+          300: '#E06060',
+          400: '#C03030',
+          500: '#8B1A1A',
+          600: '#6E1515',
+          700: '#521010',
+          800: '#380B0B',
+          900: '#200606',
+        },
+        earth: {
+          50: '#FAF5EE',
+          100: '#F0E6D4',
+          200: '#DFC9A8',
+          300: '#C9A877',
+          400: '#B08850',
+          500: '#6B4226',
+          600: '#543519',
+          700: '#3E2711',
+          800: '#2A1A0B',
+          900: '#180F05',
+        },
+        parchment: '#FDF6E3',
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'serif'],
@@ -87,6 +115,12 @@ export default {
         '2xl': '1rem',
         '3xl': '1.5rem',
       },
+      boxShadow: {
+        'warm-sm': '0 1px 3px rgba(107, 66, 38, 0.12), 0 1px 2px rgba(107, 66, 38, 0.08)',
+        'warm-md': '0 4px 12px rgba(107, 66, 38, 0.15), 0 2px 6px rgba(107, 66, 38, 0.10)',
+        'warm-lg': '0 10px 30px rgba(107, 66, 38, 0.18), 0 4px 12px rgba(107, 66, 38, 0.12)',
+        'warm-xl': '0 20px 50px rgba(107, 66, 38, 0.22), 0 8px 20px rgba(107, 66, 38, 0.15)',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -96,15 +130,10 @@ export default {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' }
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' }
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        float: 'float 4s ease-in-out infinite',
       }
     }
   },

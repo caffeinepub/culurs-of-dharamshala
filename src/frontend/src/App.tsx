@@ -1,5 +1,11 @@
-import ColoursOfDharamshala from "./components/ColoursOfDharamshala";
+import { Toaster } from "@/components/ui/sonner";
+import DharamshalaMarketplace from "./components/DharamshalaMarketplace";
 
 export default function App() {
-  return <ColoursOfDharamshala />;
+  return (
+    <>
+      <DharamshalaMarketplace />
+      <Toaster richColors position="top-right" />
+    </>
+  );
 }
